@@ -234,7 +234,7 @@
         
         lottery: [], // 中奖数据
 
-        typeMap: {1: '¥', 2: '谢谢参与'},
+        typeMap: {1: 'wiki', 2: 'Think', 3: 'sh', 4: 'Read', 5: 'Write', 6: 'Run'},
         typeClassMap: {1: '', 2: 'no-gift'},
         
         isGoing: false, // 游戏是否开始
@@ -326,17 +326,17 @@
         {
           location: 1, // 位置
           type: 1, // 中奖
-          rate: 30,
+          rate: 20,
         },
         { 
           location: 2,
           type: 2, // 未中奖
           rate: 20
         },
-        { location: 3, type: 1, rate: 10 },
-        { location: 4, type: 2, rate: 20 },
-        { location: 5, type: 1, rate: 10 },
-        { location: 6, type: 2, rate: 10 }
+        { location: 3, type: 3, rate: 15 },
+        { location: 4, type: 4, rate: 15 },
+        { location: 5, type: 5, rate: 15 },
+        { location: 6, type: 6, rate: 15 }
       ];
 
       turntable.turntable = document.querySelector('#turntable');
