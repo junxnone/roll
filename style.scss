@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/**
+  * @name      : global
+  * @type      : 活动类全局样式
+  * @author    : Ken
+  */
+/******************
+    reset
+*******************/
+html, body { -webkit-user-select:none; user-select:none; font-family:"Microsoft YaHei" Helvetica;}
+html { font-size:10px;}
+h1,h2,h3,h4,h5,h6 { font-size:1.6rem;font-weight: normal;}
+body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,
+form,fieldset,legend,input,select,textarea,button,th,td {
+    margin:0;padding:0;-webkit-text-size-adjust:none;
+}
+ul,dl,ol { list-style:none;}
+em,i { font-style:normal;}
+img, input { border:0 none;}
+a,button,input,img { -webkit-touch-callout:none;outline:none;}
+a,button,input,div { -webkit-tap-highlight-color:rgba(0,0,0,0);}
+a { text-decoration:none;}
+
+/******************
+    global
+*******************/
+input::-webkit-input-placeholder { color:#aaa;}
+.clearfix:after { content:".";display:block;font-size:0;line-height:0;color:transparent;clear:both;}
+.fl { float: left;}
+.fr { float: right}
+.tac { text-align: center;}
+.tal { text-align: left;}
+.tar { text-align: right;}
+.hide { display: none!important}
+
+/* 弹性布局 */
+.flex-box { display:-webkit-box;}
+.flex { -webkit-box-flex:1;}
+.v { -webkit-box-orient:vertical;}
+.h { -webkit-box-orient:horizontal;}
+.hc { -webkit-box-pack:center;}
+.vc { -webkit-box-align:center;}
+
+
+/******************
+    响应式
+*******************/
+@media all and (min-width:320px){
+    html { font-size: 62.5%;}
+}
+@media all and (min-width:360px){
+    html { font-size: 70.3125%;}
+}
+@media all and (min-width:375px){
+    html { font-size: 73.24218%;}
+}
+@media all and (min-width:384px){
+    html { font-size: 75%;}
+}
+@media all and (min-width:400px){
+    html { font-size: 78.125%;}
+}
+@media all and (min-width:414px){
+    html { font-size: 80.85937%;}
+}
+@media all and (min-width:424px){
+    html { font-size: 82.8125%; }
+}
+
+
+/* =========================================== */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/******************
+     第二部分 抽奖转盘
+*******************/
+.con2-bg { background-color: #0080c1; border-top:.2rem solid #0080c1;}
+.con2 {
+    position: relative; width: 29rem; height: 29rem; margin: 1rem auto;
+    border: 1.5rem solid transparent; border-image:url(../images/ball.png) 30 30 round;
+}
+.con2-item {
+    position: absolute; width: 5.5rem; height: 5.5rem;padding: .5rem;
+    background-color: #25bcfb; border: 1px solid #0080c1; border-radius: .5rem;
+}
+.con2-item:nth-child(odd) {background-color: #3bcfff;}
+.con2-item.active { background-color: #ffde42; border-color: #dfa813;}
+.con2-item.active .con2-item-ft { background-color: rgba(228,184,31,.85);}
+
+/* 奖品信息样式 */
+.con2-item-ft {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 1.3rem;
+    background-color: rgba(0,128,193,.6); color: #fff; font-size: 1.2rem; line-height: 1.3rem; text-align: center;
+}
+
+/* 奖品信息字体设置 */
+.fs8 { font-size: .8rem;}
+.fs9 { font-size: .9rem;}
+.fs10 { font-size: 1rem;}
+
+/* 奖品模块定位 */
+.lot1 { top: .5rem; left: .5rem;}
+.lot2 { top: .5rem; left: 7rem;}
+.lot3 { top: .5rem; left: 13.5rem;}
+.lot4 { top: .5rem; left: 20rem;}
+.lot5 { top: 7rem; left: 20rem;}
+.lot6 { top: 13.5rem; left: 20rem;}
+.lot7 { top: 20rem; left: 20rem;}
+.lot8 { top: 20rem; left: 13.5rem;}
+.lot9 { top: 20rem; left: 7rem;}
+.lot10 { top: 20rem; left: .5rem;}
+.lot11 { top: 13.5rem; left: .5rem;}
+.lot12 { top: 7rem; left: .5rem;}
+
+/* 奖品图片水平垂直居中 */
+.con2-item img {
+    display: block;  width: 100%; height: 100%;
+    background-repeat: no-repeat; background-position: center; background-size: contain;
+}
+
+/* 抽奖按钮 */
+.con2-man {
+    position: absolute; top: .5rem; left: 50%; width: 14.5rem; height: 19.5rem;
+    background: url(../images/man.png) no-repeat; background-size: 100%;
+    -moz-transform: translate(-50%,0); -webkit-transform: translate(-50%,0); transform: translate(-50%,0);
+}
+.con2-btn {
+    position: absolute; bottom: 1rem; left: 50%; width: 11.3rem; height: 11.3rem;
+    background-color: #ff7251; padding-top: 2rem; color: #ffdd18; font-size: 1.4rem; text-align: center;
+    box-shadow: 0 -.7rem 0 #ff5236 inset,0 .3rem 0 #ffd6c9; border-radius: 50%;
+    -moz-transform: translate(-50%,0); -webkit-transform: translate(-50%,0); transform: translate(-50%,0);
+}
+.con2-btn strong { display: block; color: #fff; font-size: 3.8rem; font-family: 'arial'; line-height: 1;}
